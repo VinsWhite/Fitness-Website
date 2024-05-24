@@ -4,11 +4,16 @@ import { ArrowDown, ArrowRight } from 'react-bootstrap-icons';
 
 export default function SingleAlarmComp() {
   const [showText, setShowText] = useState([false, false]);
+  const [showMore, setShowMore] = useState([false, false])
 
   const toggleText = (index) => {
     const newShowText = [...showText];
     newShowText[index] = !newShowText[index];
     setShowText(newShowText);
+
+    const newShowMore = [...showMore];
+    newShowMore[index] = !newShowMore[index];
+    setShowMore(newShowMore);
   };
 
   return (

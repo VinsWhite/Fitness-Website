@@ -1,8 +1,16 @@
 @import "./variables.scss";
 
 .adbanner-container {
-    background-color: $text-blue;
-    padding: 2rem 6rem;
+
+    .col1 {
+        background-color: $text-blue;
+        padding: 2rem 6rem;
+    }
+
+    .col2 {
+        background-color: $text-yellow;
+        padding: 2rem 6rem;
+    }
 
     img {
         width: 10rem;
