@@ -27,7 +27,7 @@ export default function ActivitiesComp() {
                         <p>11:10</p>
                         <p className='ms-2 opacity-75'>11:40</p>
                       </div>
-                      <p className='d-flex align-items-center'><Clock className='me-2'/> 30 min</p>
+                      <p className='d-flex align-items-center opacity-75'><Clock className='me-2'/> 30 min</p>
                     </div>
                     <div className='d-flex justify-content-between'>
                       <div>
@@ -63,7 +63,7 @@ export default function ActivitiesComp() {
                         <p>11:10</p>
                         <p className='ms-2 opacity-75'>11:40</p>
                       </div>
-                      <p className='d-flex align-items-center'><Clock className='me-2'/> 30 min</p>
+                      <p className='d-flex align-items-center opacity-75'><Clock className='me-2'/> 30 min</p>
                     </div>
                     <div className='d-flex justify-content-between'>
                       <div>
@@ -102,7 +102,7 @@ export default function ActivitiesComp() {
                         <p>11:10</p>
                         <p className='ms-2 opacity-75'>11:40</p>
                       </div>
-                      <p className='d-flex align-items-center'><Clock className='me-2'/> 30 min</p>
+                      <p className='d-flex align-items-center opacity-75'><Clock className='me-2'/> 30 min</p>
                     </div>
                     <div className='d-flex justify-content-between'>
                         <p className='text-orange'>2 persone prima di te</p>

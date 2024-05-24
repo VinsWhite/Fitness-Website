@@ -1,0 +1,25 @@
+@import "./variables.scss";
+/* 
+.discover-general-container {
+    width: 100%;
+    height: 40rem;
+} */
+
+.discover-container {
+    flex: 1;
+    background-color: $text-blue;
+    padding: 2rem 6rem;
+}
+
+.btn-custom-discover {
+    background-color: $text-yellow !important;
+    border: 0 !important;
+    border-radius: 0% !important;
+    color: $text-blue !important;
+}
+
+.discover-img {
+    background-image: url("../../assets/img/facebook-color-icon.png");
+    background-size: cover;
+    background-position: center;
+}

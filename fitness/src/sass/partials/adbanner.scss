@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+.adbanner-container {
+    background-color: $text-blue;
+    padding: 2rem 6rem;
+
+    img {
+        width: 10rem;
+    }
+}
