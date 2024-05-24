@@ -5,6 +5,7 @@
 @import "./partials/discover.scss";
 @import "./partials/alarm.scss";
 @import "./partials/adbanner.scss";
+@import "./partials/magazine.scss";
 
 .text-blue {
     color: $text-blue;
@@ -16,6 +17,11 @@
 
 .text-orange {
     color: $text-orange;
+}
+
+h4, h5, p {
+    user-select: none;
+    cursor: pointer;
 }
 
 // DA METTERE A POSTO

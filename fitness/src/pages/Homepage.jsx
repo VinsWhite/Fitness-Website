@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/esm/Container'
 import DiscoverComp from '../components/DiscoverComp'
 import AlarmsComp from '../components/AlarmsComp'
 import AdBannerComp from '../components/AdBannerComp'
+import MagazineComp from '../components/MagazineComp'
 
 export default function Homepage() {
   return (
@@ -13,6 +14,7 @@ export default function Homepage() {
         <DiscoverComp />
         <AlarmsComp />
         <AdBannerComp />
+        <MagazineComp />
       </Container>
     </>
   )
