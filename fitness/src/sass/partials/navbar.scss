@@ -1,0 +1,55 @@
+
+/* Navbar Style*/
+
+nav {
+    user-select: none;
+    cursor: pointer;
+}
+
+/* .active-link {
+    color: red;
+} */
+
+// per schermi mobile e piccoli tablet
+@media only screen and (max-width: 768px) {
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .nav-link {
+                list-style: none;
+            }
+        }   
+        
+        img {
+            width: $dimensione-immagine;
+            border-radius: $border-radius-immagine;
+            padding: $padding-immagine;
+        }
+    }
+}
+
+// per schermi più grandi
+@media only screen and (min-width: 769px) {
+    nav {
+        margin-right: 10rem;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .nav-link {
+                list-style: none;
+                padding-left: 2rem;
+            }
+        }   
+        
+        img {
+            width: $dimensione-immagine;
+            border-radius: $border-radius-immagine;
+            padding: $padding-immagine;
+        }
+    }
+}

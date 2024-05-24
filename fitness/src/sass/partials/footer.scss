@@ -1,0 +1,11 @@
+@import "./variables";
+
+.social-icon {
+    img {
+        width: $footer-icon;
+    }
+
+    .it-flag {
+        width: $footer-icon;
+    }
+}
