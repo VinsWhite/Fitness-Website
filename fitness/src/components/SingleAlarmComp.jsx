@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { ArrowDown, ArrowRight } from 'react-bootstrap-icons';
+import { MdArrowForwardIos } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function SingleAlarmComp() {
   const [showText, setShowText] = useState([false, false]);
@@ -26,9 +27,9 @@ export default function SingleAlarmComp() {
             <div className='d-flex align-items-center'>
               <p className='opacity-75 me-5'>20/12/2019</p>
               <p> {!showText[0] ? (
-                <ArrowRight />
+                <MdArrowForwardIos />
               ) : (
-                <ArrowDown />
+                <IoIosArrowDown />
               )}
               </p>
             </div>
@@ -47,9 +48,9 @@ export default function SingleAlarmComp() {
             <div className='d-flex align-items-center'>
               <p className='opacity-75 me-5'>20/12/2019</p>
               <p> {!showText[1] ? (
-                <ArrowRight />
+                <MdArrowForwardIos />
               ) : (
-                <ArrowDown />
+                <IoIosArrowDown />
               )}
               </p>
             </div>

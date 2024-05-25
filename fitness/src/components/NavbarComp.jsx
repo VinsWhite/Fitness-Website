@@ -6,10 +6,10 @@ export default function NavbarComp() {
   return (
     <nav>
       <ul>
-        <NavLink className='nav-link' to='/' activeClassName='active-link'> <HouseDoor /> </NavLink>
-        <NavLink className='nav-link' to='/reservation' activeClassName='active-link'> <Calendar3 /> </NavLink>
-        <NavLink className='nav-link' to='/' activeClassName='active-link'> <Bell /> </NavLink>
-        <NavLink className='nav-link' to='/' activeClassName='active-link'> <img src={stock} alt="foto profilo" /> </NavLink>
+        <NavLink to='/' className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link text-secondary'}> <HouseDoor /> </NavLink>
+        <NavLink to='/reservation' className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link text-secondary'}> <Calendar3 /> </NavLink>
+        <NavLink className='nav-link text-secondary'>  <Bell /> </NavLink>
+        <NavLink className='nav-link text-secondary'> <img src={stock} alt="foto profilo" /> </NavLink>
       </ul>
     </nav>
   )

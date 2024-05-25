@@ -1,9 +1,16 @@
 .carousel-indicators {
 
     bottom: -4rem !important;
+    height: 4px !important; 
 
     button {
         background-color: $text-yellow !important;
     }
 }
 
+.arrowMagazine {
+    background-color: $text-yellow;
+    font-size: 20rem !important;
+    padding: 0.2rem;
+    transform: skew(5deg, 5deg);
+}
