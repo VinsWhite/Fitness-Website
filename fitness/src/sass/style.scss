@@ -6,6 +6,7 @@
 @import "./partials/alarm.scss";
 @import "./partials/adbanner.scss";
 @import "./partials/magazine.scss";
+@import "./partials/days.scss";
 
 .text-blue {
     color: $text-blue;
@@ -24,5 +25,24 @@ div {
     /* cursor: pointer; */
 }
 
-// DA METTERE A POSTO
-// navbar active 
+.starter-bg {
+    z-index: -2000;
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    overflow: hidden;
+
+    .starter-1 {
+        background-color: $text-blue;
+        flex: 1 55%;
+    }
+
+    .starter-2 {
+        background-color: $text-yellow;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+        transform: scaleX(1.3);
+        flex: 1 45%;
+    }
+}

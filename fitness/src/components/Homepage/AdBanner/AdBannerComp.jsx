@@ -1,6 +1,6 @@
 import React from 'react';
-import googlePlay from '../assets/img/googlePlay-badge.png';
-import appStore from '../assets/img/appStore-badge.png';
+import googlePlay from '../../../assets/img/googlePlay-badge.png';
+import appStore from '../../../assets/img/appStore-badge.png';
 import { Row, Col } from 'react-bootstrap';
 
 export default function AdBannerComp() {

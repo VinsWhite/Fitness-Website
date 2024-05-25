@@ -5,7 +5,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import NavbarComp from './components/NavbarComp';
 import Reservation from './pages/Reservation'
 import FooterComp from './components/FooterComp';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function App() {
 
@@ -21,6 +21,10 @@ function App() {
           </Routes>
         <FooterComp />
       </Container>
+      {/* <Row className='starter-bg py-5 m-0'>
+          <Col className='starter-1 p-5 m-0'></Col>
+          <Col className='starter-2 p-5 d-none d-md-block'></Col>
+      </Row> */}
       </BrowserRouter>
     </>
   )

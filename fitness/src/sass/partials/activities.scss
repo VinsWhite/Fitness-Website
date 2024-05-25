@@ -24,3 +24,14 @@
 .attività-attesa-sm {
     margin-top: 5rem !important;
 }
+
+.postural-training-bg {
+    background-color: $text-yellow;
+    clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+    padding: 0.8rem;
+    transform: scaleX(1.12);
+}
+
+.postural-training {
+    color: $text-blue !important;
+}

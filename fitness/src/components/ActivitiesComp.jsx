@@ -136,8 +136,8 @@ export default function ActivitiesComp() {
                   </Col>
                   <Col md={8}>
                     <Card.Body>
-                      <div className='d-flex justify-content-between align-items-center mb-2'>
-                        <Card.Title className='text-blue fw-semibold'>Postural Training</Card.Title>
+                      <div className='d-flex justify-content-between align-items-center me-4 mb-2 pe-4 postural-training-bg'>
+                        <Card.Title className='fw-semibold postural-training'>Postural Training</Card.Title>
                         <MdArrowForwardIos className='fs-5 text-blue' />
                       </div>
                       <div> {/* Card text */}
@@ -175,8 +175,8 @@ export default function ActivitiesComp() {
                   </Col>
                   <Col md={8}>
                     <Card.Body>
-                      <div className='d-flex justify-content-between align-items-center mb-2'>
-                        <Card.Title className='text-blue fw-semibold'>Postural Training</Card.Title>
+                      <div className='d-flex justify-content-between align-items-center me-4 mb-2 pe-4 postural-training-bg'>
+                        <Card.Title className='fw-semibold postural-training'>Postural Training</Card.Title>
                         <MdArrowForwardIos className='fs-5 text-blue' />
                       </div>
                       <div> {/* Card text */}
@@ -210,7 +210,7 @@ export default function ActivitiesComp() {
         </Col>
 
         <Col xs={12} className='attività-attesa-sm'>
-          <h5 className='text-uppercase mb-5 text-blue fw-semibold'>Hai 1 attività in lista d'attesa</h5>
+          <h5 className='text-uppercase mb-5 text-blue fw-semibold'>Hai <span className='fw-bold'>1</span> attività in lista d'attesa</h5>
           <Card className='shadow'>
             <Row className='g-0'>
               <Col>

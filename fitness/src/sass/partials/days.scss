@@ -1,0 +1,19 @@
+.days-container {
+    background-color: $text-blue;
+    width: 80%;
+    padding: 1rem;
+    margin-left: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%);
+
+    .day {
+    color: $text-blue;
+    background-color: $text-yellow;
+    padding: 0 3.5rem;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+
+        p, h5 {
+            margin: 0.2rem 0;
+        }
+    }
+}
+

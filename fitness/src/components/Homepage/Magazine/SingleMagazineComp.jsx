@@ -12,7 +12,9 @@ export default function SingleMagazineComp({ title, date, description, image }) 
                     { description }
                 </Card.Text>
                 <p className='opacity-75'>{date} </p>
-                <MdArrowForwardIos className='arrowMagazine position-absolute top-0 end-0 me-4 text-blue fs-2' />
+                <div className='arrowMagazine position-absolute end-0 me-3'>
+                    <MdArrowForwardIos className='text-blue fs-4' />
+                </div>
             </Card.Body>
         </Card>
   )
