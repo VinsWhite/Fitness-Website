@@ -1,0 +1,52 @@
+.activity-gym {
+    height: 6rem;
+    padding-right: 1rem;
+    overflow: hidden;
+
+    .div-img {
+        width: 15%;
+
+        div {
+            background-color: var(--custom-color); // in questo modo rendiamo il colore customizzabile (nel componente ActivitiesGymComp continuo la spiegazione)
+            height: 7rem;
+            width: 0.35rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 0, 94% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    /* proprietà comuni per i pulsanti */
+    button {
+        font-weight: 700;
+    }
+
+    /* pulsante di iscrizione */
+    .subscribe-button {
+        @extend button; /* estendo le proprietà comuni */
+        background-color: $text-yellow;
+        padding: 1rem 5rem;
+        border: 0;
+        color: $text-blue;
+    }
+    
+    /* pulsante annulla */
+    .cancel-button {
+        @extend button;
+        background-color: inherit;
+        padding: 1rem 4.8rem;
+        border: 0.2rem solid $text-orange;
+        color: $text-orange;
+    }
+
+    .reservation-button {
+        @extend button;
+        background-color: inherit;
+        padding: 1rem 2.4rem;
+        border: 0.2rem solid $text-blue;
+        color: $text-blue;
+    }
+}

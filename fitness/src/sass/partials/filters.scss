@@ -1,0 +1,26 @@
+.filter-container {
+    background-color: $text-yellow;
+    padding: 2rem;
+    width: 95%;
+    clip-path: polygon(0 0, 97% 0, 100% 100%, 0% 100%);
+}
+
+/* personalizzazione react select control */
+
+.react-select__input-container {
+    color: $text-blue !important;
+}
+
+.react-select__control {
+    border-bottom: 1px solid black !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    background-color: $text-yellow !important;
+    border-radius: 0 !important;
+}
+
+.react-select__indicator-separator {
+    display: none;
+}
+

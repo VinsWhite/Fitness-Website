@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function SingleDayComp({ day, month, isToday }) {
+export default function SingleDayComp({ day, month, label }) {
   return (
     <div className='day'>
-      <p>{isToday ? 'Oggi' : ''}</p>
+      <p>{label}</p>
       <h5>{day}</h5>
       <p>{month}</p>
     </div>
-  )
+  );
 }
