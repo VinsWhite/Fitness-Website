@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdArrowForwardIos, MdArrowBackIosNew } from 'react-icons/md';
 import SingleDayComp from './SingleDayComp';
+import { Row, Col } from 'react-bootstrap';
 
 export default function DaysComp() {
   const today = new Date();
@@ -28,14 +29,22 @@ export default function DaysComp() {
 
   return (
     <div className='text-center'>
-      <div className='d-flex days-container justify-content-around align-items-center px-5'>
-        <MdArrowBackIosNew className='fs-5 text-yellow' />
+      <Row className='days-container justify-content-between align-items-center'>
+        <Col xs={1} className='d-flex justify-content-center align-items-center'>
+          <MdArrowBackIosNew className='fs-5 text-yellow d-none d-md-block' />
+        </Col>
         {Array.from({ length: 7 }, (_, index) => {
           const { day, month, label } = getDayDetails(index);
-          return <SingleDayComp key={index} day={day} month={month} label={label} />;
+          return (
+            <Col key={index} xs={1} className='d-flex justify-content-center align-items-center'>
+              <SingleDayComp day={day} month={month} label={label} />
+            </Col>
+          );
         })}
-        <MdArrowForwardIos className='fs-5 text-yellow' />
-      </div>
+        <Col xs={1} className='d-flex justify-content-center align-items-center'>
+          <MdArrowForwardIos className='fs-5 text-yellow d-none d-md-block' />
+        </Col>
+      </Row>
     </div>
   );
 }

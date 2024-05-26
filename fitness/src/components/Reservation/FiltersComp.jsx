@@ -1,53 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
-import { Fire, GeoAlt } from 'react-bootstrap-icons';
-import { LiaDumbbellSolid } from "react-icons/lia";
+import { Filter } from 'react-bootstrap-icons';
+import { locations, categories, activities } from '../../assets/data/filters';
 
-const locations = [
-  { value: '', label: <span><GeoAlt /> Tutte le località</span> },
-  { value: 'dog', label: 'Dog' },
-  { value: 'cat', label: 'Cat' },
-  { value: 'hamster', label: 'Hamster' },
-  { value: 'parrot', label: 'Parrot' },
-  { value: 'spider', label: 'Spider' },
-  { value: 'goldfish', label: 'Goldfish' }
-];
-
-const categories = [
-  { value: '', label: <span><Fire /> Tutte le categorie </span> },
-  { value: 'acqua', label: 'Attività in acqua'},
-  { value: 'cardio', label: 'Cardiovascolari'},
-  { value: 'danza', label: 'Danza'},
-]
-
-const activities = [
-  { value: '', label: <span><LiaDumbbellSolid /> Tutte le attività </span> },
-  { value: 'attivita1', label: 'Attività 1' }
-]
+// !! ho spostato locations ecc. in un altro file per una migliore organizzazione
 
 export default function FiltersComp() {
+
+  const [openFilters, setOpenFilters] = useState(false); // stato per aprire il menù con 
+
   return (
     <div>
       <div className='filter-container'>
-        <div className='d-flex text-blue align-items-center justify-content-around'>
+        <div className='d-md-flex d-none text-blue align-items-center justify-content-around'>
           <Select /* uso questo select di react select per poter renderizzare ad esempio anche le icone; con il select classico non è possibile farlo */
             options={locations} 
             defaultValue={locations[0]} 
             className="select-container"
+            menuPortalTarget={document.body} // in questo modo il menu del select esce fuori dal suo contenitore ed è visibile
             classNamePrefix="react-select"
           />
           <Select 
             options={categories} 
             defaultValue={categories[0]} 
             className="select-container"
+            menuPortalTarget={document.body}
             classNamePrefix="react-select"
           />
           <Select 
             options={activities} 
             defaultValue={activities[0]} 
             className="select-container"
+            menuPortalTarget={document.body}
             classNamePrefix="react-select"
           />
+        </div>
+
+        {/* filtri per la modalità più piccola */}
+        <div className='d-block d-md-none text-center text-blue'>
+          <h5 onClick={() => setOpenFilters(!openFilters)}><Filter /> Filtri</h5>
+          {openFilters && (
+            <>
+              <div className='mx-5 pb-4'>
+                <Select /* uso questo select di react select per poter renderizzare ad esempio anche le icone; con il select classico non è possibile farlo */
+                  options={locations} 
+                  defaultValue={locations[0]} 
+                  className="select-container"
+                  menuPortalTarget={document.body} // in questo modo il menu del select esce fuori dal suo contenitore ed è visibile
+                  classNamePrefix="react-select"
+                />
+                <Select 
+                  options={categories} 
+                  defaultValue={categories[0]} 
+                  className="select-container"
+                  menuPortalTarget={document.body}
+                  classNamePrefix="react-select"
+                />
+                <Select 
+                  options={activities} 
+                  defaultValue={activities[0]} 
+                  className="select-container"
+                  menuPortalTarget={document.body}
+                  classNamePrefix="react-select"
+                />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

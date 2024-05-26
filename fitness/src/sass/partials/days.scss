@@ -1,19 +1,49 @@
 .days-container {
     background-color: $text-blue;
-    width: 80%;
-    padding: 1rem;
-    margin-left: auto;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%);
+    width: 100%;
+    
+    margin: 0 !important;
+    z-index: 20;
+    position: relative;
+    
+    p, h5 {
+        @media screen and (max-width: 768px) { 
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) { 
+        padding: 1rem 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%);
+        padding: 1rem;
+    }
 
     .day {
-    color: $text-blue;
-    background-color: $text-yellow;
-    padding: 0 3.5rem;
-    clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+    padding: 0 1rem;
+
+    @media screen and (max-width: 768px) {
+        color: black;
+        background-color: white;
+    }
+    
+    @media screen and (min-width: 768px) {
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+        color: white;
+        padding: 0 2.5rem;
+    }
+    
 
         p, h5 {
-            margin: 0.2rem 0;
+            margin: 0;
         }
+    }
+
+    .bg-day {
+        background-color: $text-yellow;
+        color: $text-blue;
     }
 }
 

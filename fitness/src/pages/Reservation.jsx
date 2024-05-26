@@ -7,7 +7,7 @@ import ActivitiesGymComp from '../components/Reservation/ActivitiesGymComp'
 export default function Reservation() {
   return (
     <>
-      <DaysComp className='mt-5' />
+      <DaysComp className='mt-4' />
       <FiltersComp className='mt-5' />
       <Container className='mt-4'>
         <ActivitiesGymComp />

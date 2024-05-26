@@ -12,19 +12,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Container fluid>
-        <NavbarComp />
+      <NavbarComp />
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/reservation' element={<Reservation />} />
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
-        <FooterComp />
-      </Container>
-      {/* <Row className='starter-bg py-5 m-0'>
-          <Col className='starter-1 p-5 m-0'></Col>
-          <Col className='starter-2 p-5 d-none d-md-block'></Col>
-      </Row> */}
+      <FooterComp />
       </BrowserRouter>
     </>
   )
