@@ -1,0 +1,19 @@
+SUDDIVISIONE CARTELLE
+
+Nella cartella src ho inserito tutto l'occcorrente per il progetto.
+
+Aassets contiene l'iconcina del sito, la cartella immagini
+e la cartella data (dove sono memorizzati i dati fittizzi delle attività ma anche i dati dei filtri della pagina prenotazioni).
+
+In componenti troviamo i vari "pezzettini" del progetto.
+Abbiamo quindi la cartella homepage con i componenti della pagina principale suddivisi in ulteriore cartelle e 
+in Reservation quelli della pagina di prenotazione.
+Inoltre troviamo anche i componenti footer e navbar.
+
+Nella cartella pages abbiamo le 3 pagine del progetto: homepage, Reservation e not found page (quest'ultima
+non ho avuto il tempo di sistemarla).
+
+Nella cartella sass abbiamo lo stile custum suddiviso in partials.
+
+Nella cartella state troviamo la gestione dello stato globale dei filtri.
+

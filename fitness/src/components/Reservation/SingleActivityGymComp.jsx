@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { CheckCircle, Clock } from 'react-bootstrap-icons'
 import { MdArrowForwardIos } from 'react-icons/md'
 
-export default function SingleActivityGymComp({ name, image, duration, startTime, endTime, seats, dynamicColor, reservation, pendingSeats, free }) {
+export default function SingleActivityGymComp
+        ({ name, image, duration, startTime, endTime, seats, dynamicColor,
+             reservation, pendingSeats, free, activity, location, category }) {
     
     const [subscribed, setSubscribed] = useState(false);
     const [reservated, setReservated] = useState(false);
@@ -40,6 +42,7 @@ export default function SingleActivityGymComp({ name, image, duration, startTime
                     <p className='opacity-75 d-flex align-items-center'><Clock className='me-2' />{duration} min</p>
                     <p className='fw-semibold ms-4'>{startTime} <span className='opacity-75 ms-2'>{endTime}</span></p>
                 </div>
+                <p className='d-none'>{location} {category} {activity}</p>
                 {(!reservation && !free) ? (
         <>
             <div>
@@ -101,6 +104,7 @@ export default function SingleActivityGymComp({ name, image, duration, startTime
                     <p className='fw-semibold'>{startTime} <span className='opacity-75 ms-2'>{endTime}</span></p>
                     <p className='opacity-75 d-flex align-items-center'><Clock className='me-2' />{duration} min</p>
                 </div>
+                <p className='d-none'>{location} {category} {activity}</p>
                 <h5 className='text-blue d-flex align-items-center text-start w-100'>{name} <MdArrowForwardIos className='ms-2' /></h5>
                     
                 {(!reservation && !free) ? (

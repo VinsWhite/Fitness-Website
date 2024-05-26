@@ -49,8 +49,17 @@ export default function SingleWaitActivity() {
 
                         {/* negli schermi più piccoli */}
                       <div className='d-flex flex-column align-items-center d-lg-none'>
-                        <p className='text-orange mb-1'>2 persone prima di te</p>
-                        <Button className='btn-custom fw-semibold px-5' onClick={() => setCancel(!cancel)}> ANNULLA </Button>
+                        {!cancel ? (
+                                <>
+                                    <p className='text-orange'>2 persone prima di te</p>
+                                    <Button className='btn-custom fw-semibold' onClick={() => setCancel(!cancel)}> ANNULLA </Button>
+                                </>
+                            ) : (
+                                <>
+                                    <p className='text-orange'>Prenotazione cancellata</p>
+                                    <Button className='btn-custom fw-semibold' onClick={() => setCancel(!cancel)}> PRENOTA </Button>
+                                </>
+                            )}
                       </div>
                       
                     </div>

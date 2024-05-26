@@ -11,7 +11,11 @@
     }
 
     .col2 {
+        background-image: url("/appDemo.jpeg");
         background-color: $text-yellow;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
         padding: 2rem 6rem;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
         transform: scaleX(1.3);

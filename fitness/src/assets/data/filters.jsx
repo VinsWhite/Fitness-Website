@@ -1,8 +1,10 @@
 import { LiaDumbbellSolid } from "react-icons/lia";
 import { Fire, GeoAlt } from 'react-bootstrap-icons';
 
+// ho eliminato le icone da qui perché davano problemi di serializzazione
+
 export const locations = [
-    { value: '', label: <span><GeoAlt /> Tutte le località</span> },
+    { value: '', label: 'Tutte le località' },
     { value: 'roma', label: 'Roma' },
     { value: 'milano', label: 'Milano' },
     { value: 'firenze', label: 'Firenze' },
@@ -17,15 +19,17 @@ export const locations = [
 ];
 
 export const categories = [
-    { value: '', label: <span><Fire /> Tutte le categorie </span> },
-    { value: 'acqua', label: 'Attività in acqua'},
+    { value: '', label: 'Tutte le categorie' },
+    { value: 'water', label: 'Attività in acqua'},
     { value: 'cardio', label: 'Cardiovascolari'},
-    { value: 'danza', label: 'Danza'},
+    { value: 'relax', label: 'Attività rilassanti'},
+    { value: 'dance', label: 'Danza'},
 ]
 
 export const activities = [
-    { value: '', label: <span><LiaDumbbellSolid /> Tutte le attività </span> },
-    { value: 'iscrizione', label: 'Ad iscrizione' },
-    { value: 'attesa', label: 'In attesa' },
-    { value: 'prenotato', label: 'Già prenotato' }
+    { value: '', label: 'Tutte le attività' },
+    { value: 'subscription', label: 'Ad iscrizione' },
+    { value: 'waiting', label: 'In attesa' },
+    { value: 'free', label: 'Attività libera' },
+    { value: 'booked-up', label: 'Già prenotato' }
   ]

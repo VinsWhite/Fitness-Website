@@ -14,6 +14,9 @@ export const activitiesGym = [
         dynamicColor: '#f14435', // in questo modo possiamo passare con gli oggetti anche il colore
         reservation: false,
         free: false,// quando si tratta di un'attività libera
+        location: 'roma',
+        category: 'relax',
+        activity: 'subscription'
     },
     {
         name: 'Play aqua',
@@ -24,6 +27,9 @@ export const activitiesGym = [
         dynamicColor: '#80d4fa',
         reservation: false,
         free: true, // in questo caso essendo un'attività libera, non abbiamo neppure i posti da segnalare
+        location: 'roma',
+        category: 'water',
+        activity: 'free'
     },
     {
         name: 'Body Pump',
@@ -36,6 +42,9 @@ export const activitiesGym = [
         reservation: true,
         pendingSeats: 4, // in caso di prenotazione necessaria, viene mostrato il numero di persone che sono in attesa
         free: false,
+        location: 'catania',
+        category: 'cardio',
+        activity: 'waiting'
     },
     {
         name: 'Pancafit',
@@ -47,6 +56,9 @@ export const activitiesGym = [
         dynamicColor: '#9a27b0',
         reservation: false,
         free: false,
+        location: 'firenze',
+        category: 'cardio',
+        activity: 'subscription'
     },
     {
         name: 'Play aqua',
@@ -58,6 +70,9 @@ export const activitiesGym = [
         dynamicColor: '#80d4fa',
         reservation: false,
         free: false,
+        location: 'napoli',
+        category: 'water',
+        activity: 'subscription'
     },
     {
         name: 'Hatha Yoga',
@@ -70,6 +85,9 @@ export const activitiesGym = [
         reservation: true,
         pendingSeats: 4,
         free: false,
+        location: 'palermo',
+        category: 'relax',
+        activity: 'waiting'
     },
     {
         name: 'Body Pump',
@@ -81,6 +99,9 @@ export const activitiesGym = [
         dynamicColor: '#4ab052',
         reservation: false,
         free: false,
+        location: 'bologna',
+        category: 'cardio',
+        activity: 'subscription'
     },
     {
         name: 'Play aqua',
@@ -91,5 +112,8 @@ export const activitiesGym = [
         dynamicColor: '#80d4fa',
         reservation: false,
         free: true, 
+        location: 'genova',
+        category: 'water',
+        activity: 'free'
     },
 ];

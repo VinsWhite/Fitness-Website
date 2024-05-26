@@ -5,7 +5,6 @@ import NotFoundPage from './pages/NotFoundPage'
 import NavbarComp from './components/NavbarComp';
 import Reservation from './pages/Reservation'
 import FooterComp from './components/FooterComp';
-import { Container, Row, Col } from 'react-bootstrap';
 
 function App() {
 

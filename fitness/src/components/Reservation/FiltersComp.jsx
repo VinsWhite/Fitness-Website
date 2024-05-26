@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import { Filter } from 'react-bootstrap-icons';
+import { useDispatch } from 'react-redux';
+import { setFilter } from '../../state/filterSlice';
 import { locations, categories, activities } from '../../assets/data/filters';
 
 // !! ho spostato locations ecc. in un altro file per una migliore organizzazione
 
 export default function FiltersComp() {
+  const dispatch = useDispatch();
 
-  const [openFilters, setOpenFilters] = useState(false); // stato per aprire il menù con 
+  const [openFilters, setOpenFilters] = useState(false); // stato per aprire il menù  
+
+  const handleFilterChange = (name, selectedOption) => {
+    dispatch(setFilter({ name, value: selectedOption }));
+    /* console.log(`Stato del filtro ${name}:`, selectedOption); */
+  };  
 
   return (
     <div>
@@ -19,6 +27,7 @@ export default function FiltersComp() {
             className="select-container"
             menuPortalTarget={document.body} // in questo modo il menu del select esce fuori dal suo contenitore ed è visibile
             classNamePrefix="react-select"
+            onChange={(selectedOption) => handleFilterChange('location', selectedOption)}
           />
           <Select 
             options={categories} 
@@ -26,6 +35,7 @@ export default function FiltersComp() {
             className="select-container"
             menuPortalTarget={document.body}
             classNamePrefix="react-select"
+            onChange={(selectedOption) => handleFilterChange('category', selectedOption)}
           />
           <Select 
             options={activities} 
@@ -33,6 +43,7 @@ export default function FiltersComp() {
             className="select-container"
             menuPortalTarget={document.body}
             classNamePrefix="react-select"
+            onChange={(selectedOption) => handleFilterChange('activity', selectedOption)}
           />
         </div>
 
@@ -48,6 +59,7 @@ export default function FiltersComp() {
                   className="select-container"
                   menuPortalTarget={document.body} // in questo modo il menu del select esce fuori dal suo contenitore ed è visibile
                   classNamePrefix="react-select"
+                  onChange={(selectedOption) => handleFilterChange('location', selectedOption)}
                 />
                 <Select 
                   options={categories} 
@@ -55,6 +67,7 @@ export default function FiltersComp() {
                   className="select-container"
                   menuPortalTarget={document.body}
                   classNamePrefix="react-select"
+                  onChange={(selectedOption) => handleFilterChange('category', selectedOption)}
                 />
                 <Select 
                   options={activities} 
@@ -62,6 +75,7 @@ export default function FiltersComp() {
                   className="select-container"
                   menuPortalTarget={document.body}
                   classNamePrefix="react-select"
+                  onChange={(selectedOption) => handleFilterChange('activity', selectedOption)}
                 />
               </div>
             </>

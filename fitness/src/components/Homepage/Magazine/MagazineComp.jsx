@@ -22,7 +22,7 @@ export default function MagazineComp() {
           </h5>
           <h5 className='text-orange fw-semibold'>Mostra tutti</h5>
         </div>
-        <Carousel className='mt-3'>
+        <Carousel className='mt-3 d-none d-md-block'>
           {cardData.map((data, index) => (
             <Carousel.Item key={index}>
               <Row>
@@ -46,6 +46,74 @@ export default function MagazineComp() {
               <Row>
                 {[...Array(4)].map((_, i) => ( 
                   <Col md={3} key={i}>
+                    <SingleMagazineComp
+                      title={data.title}
+                      date={data.date}
+                      description={data.description} 
+                      image={personeNevi} 
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+
+          {/* su schermi più piccoli */}
+        <Carousel className='mt-3 d-md-none d-block'>
+        {cardData.map((data, index) => (
+            <Carousel.Item key={index}>
+              <Row>
+                {[...Array(1)].map((_, i) => ( 
+                  <Col xs={12} key={i}>
+                    <SingleMagazineComp
+                      title={data.title}
+                      date={data.date}
+                      description={data.description} 
+                      image={personeNevi} 
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          ))}
+          {cardData.map((data, index) => (
+            <Carousel.Item key={index}>
+              <Row>
+                {[...Array(1)].map((_, i) => ( 
+                  <Col xs={12} key={i}>
+                    <SingleMagazineComp
+                      title={data.title}
+                      date={data.date}
+                      description={data.description} 
+                      image={personeNevi} 
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          ))}
+          {cardData.map((data, index) => (
+            <Carousel.Item key={index}>
+              <Row>
+                {[...Array(1)].map((_, i) => ( 
+                  <Col xs={12} key={i}>
+                    <SingleMagazineComp
+                      title={data.title}
+                      date={data.date}
+                      description={data.description} 
+                      image={personeNevi} 
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          ))}
+          {cardData.map((data, index) => (
+            <Carousel.Item key={index}>
+              <Row>
+                {[...Array(1)].map((_, i) => ( 
+                  <Col xs={12} key={i}>
                     <SingleMagazineComp
                       title={data.title}
                       date={data.date}
